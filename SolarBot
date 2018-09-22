@@ -1,0 +1,51 @@
+const Discord = require('discord.js');
+const client = new Discord.Client();
+
+
+client.on('ready',  () => {
+  console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'); 
+  console.log('by BestGamerYT_');
+  console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+  console.log(`Logged in as  * [ " ${client.user.username} " ] servers! [ " ${client.guilds.size} " ]`);
+  console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+  console.log('is online')
+client.user.setStatus("dnd");
+});
+
+// playing
+client.on('ready', () => {                           
+client.user.setGame(`$help | :D `,'https://www.twitch.tv/tarikrs');                                                                                                                                                                                                                                                                                                                                                                                                                             client.user.setGame(`-help | On 20 Servers`,'https://www.twitch.tv/v5bz');
+});          
+
+
+
+client.on('message', message => {
+     if (message.content === "") {
+message.author.send("**Bot Help**" + `  **
+
+ Thx For using our bot its on its begining so no commands is here now . : )
+
+
+client.on('message',async power => { //POWER
+    if(power.content.startsWith(prefix + "server")) { //POWER
+      let embed = new Discord.RichEmbed() //POWER
+      .setAuthor(power.author.username, power.author.avatarURL) //POWER
+      .setTitle(`\`${power.guild.name}\``) //POWER
+      .setThumbnail(power.guild.iconURL) //POWER
+      .addField('• ?MY Id :', `- ${power.guild.id}`,true) //POWER
+      .addField('• Owner Ship :', `- ${power.guild.owner}`, true) //POWER
+      .addField('• Channels:', `\`#\` ${power.guild.channels.filter(a => a.type === 'text').size} - \`??\` ${power.guild.channels.filter(a => a.type === 'voice').size}`, true) //POWER
+      .addField('• Members:', `\`Count\` ${power.guild.memberCount} - \`Last\` ${Array.from(power.channel.guild.members.values()).sort((a, b) => b.joinedAt - a.joinedAt).map(m => `${m}`).splice(0, 1)}`, true) //POWER
+      .addField('• AfK Room :', `${power.guild.afkChannel || 'None'}`, true) //POWER
+      .addField('• Roles :', `\`Roles\` ${power.guild.roles.size} - \`Emojis\` ${power.guild.emojis.size} \`[\` ${power.guild.emojis.map(m => m).join(' **|** ')} \`]\``,true) //POWER
+      .addField('• Region :', `${power.guild.region}`, true); //POWER
+  
+      power.channel.send(embed); //POWER
+    }
+  });
+
+
+
+
+
+ 
