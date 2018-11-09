@@ -1,13 +1,9 @@
-{
-  "name": "test", Solar Bot
-  "description": "test", Love Solar
-  "version": "0.0.0" , 
-  "main": "bot.js" , Solar Bot
-  "scripts": {
-  "start": "node Solar Bot.js"
-  },
-  "dependencies":  { 
-  "discord.js": "11.1.8",
-  "request": "2.81.0"
- }
-} 
+client.on('message', async message =>{
+
+    const args = message.content.split(' ').slice(1).join(' ');
+    if(message.content.startsWith(prefix+"emojislist")) {
+  const emojiList = message.guild.emojis.map(e=>e.toString()).join(' ');
+  if(emojiList === "") return;
+  message.channel.send("ايموجيات السيرفر: " 
+                       + emojiList);
+    }
